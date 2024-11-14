@@ -1,7 +1,7 @@
 terraform {
   backend "s3" {
     bucket = "terraform-state-demonstration"
-    key    = "development/purchases"
+    key    = "development/paz"
     region = "us-east-1"
   }
 }
