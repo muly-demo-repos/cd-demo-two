@@ -10,7 +10,7 @@ env:
   AWS_REGION: us-east-1
   ECR_REPOSITORY: purchases
   ECS_SERVICE: purchases
-  ECS_CLUSTER: development-cluster
+  ECS_CLUSTER: development-cluster-purchases
   ECS_TASK_DEFINITION: .github/workflows/configuration/cd-purchases-aws-ecs.json
 
 jobs:

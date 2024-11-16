@@ -44,7 +44,7 @@
             "volumesFrom": []
         }
     ],
-    "executionRoleArn": "arn:aws:iam::369232204790:role/custom_ecs_execution",
+    "executionRoleArn": "arn:aws:iam::369232204790:role/custom_ecs_execution_purchases",
     "networkMode": "awsvpc",
     "requiresCompatibilities": [
         "FARGATE"
