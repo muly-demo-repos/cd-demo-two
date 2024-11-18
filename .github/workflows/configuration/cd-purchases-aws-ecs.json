@@ -7,10 +7,20 @@
             "essential": true,
             "portMappings": [
                 {
-                    "name": "purchases-5202-tcp",
-                    "containerPort": 5202,
-                    "hostPort": 5202,
+                    "name": "purchases-8080-tcp",
+                    "containerPort": 8080,
+                    "hostPort": 8080,
                     "protocol": "tcp"
+                }
+            ],
+            "environment": [
+                {
+                    "name": "ASPNETCORE_HTTP_PORTS",
+                    "value": "8080"
+                },
+                {
+                    "name": "ASPNETCORE_ENVIRONMENT",
+                    "value": "Development"
                 }
             ],
             "secrets": [
@@ -44,7 +54,7 @@
             "volumesFrom": []
         }
     ],
-    "executionRoleArn": "arn:aws:iam::369232204790:role/custom_ecs_execution",
+    "executionRoleArn": "arn:aws:iam::369232204790:role/custom_ecs_execution_purchases",
     "networkMode": "awsvpc",
     "requiresCompatibilities": [
         "FARGATE"

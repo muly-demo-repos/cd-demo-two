@@ -2,7 +2,7 @@ module "iam_assumable_role_custom_ecs_execution" {
   source  = "terraform-aws-modules/iam/aws//modules/iam-assumable-role"
   version = "5.48.0"
 
-  role_name         = "custom_ecs_execution"
+  role_name         = "custom_ecs_execution_purchases"
   create_role       = true
   role_requires_mfa = false
 
@@ -15,7 +15,7 @@ module "iam_policy_custom_ecs_execution" {
   source  = "terraform-aws-modules/iam/aws//modules/iam-policy"
   version = "5.48.0"
 
-  name = "custom_ecs_execution_policy"
+  name = "custom_ecs_execution_policy_purchases"
 
   policy = <<EOF
 {
@@ -57,7 +57,7 @@ module "iam_assumable_role_custom_ecs_register" {
   source  = "terraform-aws-modules/iam/aws//modules/iam-assumable-role"
   version = "5.48.0"
 
-  role_name         = "custom_ecs_register"
+  role_name         = "custom_ecs_register_purchases"
   create_role       = true
   role_requires_mfa = false
 
@@ -70,7 +70,7 @@ module "iam_policy_custom_ecs_register" {
   source  = "terraform-aws-modules/iam/aws//modules/iam-policy"
   version = "5.48.0"
 
-  name = "custom_ecr_register_policy"
+  name = "custom_ecr_register_policy_purchases"
 
   policy = <<EOF
 {

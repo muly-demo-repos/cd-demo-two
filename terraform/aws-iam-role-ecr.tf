@@ -2,7 +2,7 @@ module "iam_assumable_role_custom_ecr_register" {
   source  = "terraform-aws-modules/iam/aws//modules/iam-assumable-role"
   version = "5.48.0"
 
-  role_name         = "custom_ecr_register"
+  role_name         = "custom_ecr_register_purchases"
   create_role       = true
   role_requires_mfa = false
 
@@ -15,7 +15,7 @@ module "iam_policy_custom_ecr_register_role" {
   source  = "terraform-aws-modules/iam/aws//modules/iam-policy"
   version = "5.48.0"
 
-  name = "custom_ecr_register_role"
+  name = "custom_ecr_register_role_purchases"
 
   policy = <<EOF
 {

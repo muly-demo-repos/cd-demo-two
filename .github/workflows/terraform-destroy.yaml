@@ -1,12 +1,7 @@
-name: terraform-apply
+name: terraform-destroy
 
 on:
-  workflow_call:
-    secrets:
-      AWS_ACCESS_KEY_ID:
-        required: true
-      AWS_SECRET_ACCESS_KEY:
-        required: true
+  workflow_dispatch: {}
 
 env:
   AWS_REGION: us-east-1
@@ -33,7 +28,7 @@ jobs:
         working-directory: terraform
         run: terraform init
       
-      - name: terraform apply
-        id: apply
+      - name: terraform destroy
+        id: destroy
         working-directory: terraform
-        run: terraform apply -auto-approve -no-color -input=false
+        run: terraform destroy -auto-approve -no-color -input=false

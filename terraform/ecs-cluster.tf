@@ -2,7 +2,7 @@ module "ecs_cluster_paz" {
   source  = "terraform-aws-modules/ecs/aws//modules/cluster"
   version = "5.2.2"
 
-  cluster_name = "${local.environment}-cluster"
+  cluster_name = "${local.environment}-cluster-purchases"
 
   fargate_capacity_providers = {
     FARGATE = {
