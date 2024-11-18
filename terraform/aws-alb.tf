@@ -37,13 +37,13 @@ module "ecs_alb_purchases" {
     {
       name             = "purchases"
       backend_protocol = "HTTP"
-      backend_port     = 5202
+      backend_port     = 8080
       target_type      = "ip"
 
       health_check = {
         enabled             = true
         interval            = 30
-        path                = "/api/_health/live"
+        path                = "/swagger/index.html"
         port                = "traffic-port"
         healthy_threshold   = 3
         unhealthy_threshold = 3
@@ -53,4 +53,9 @@ module "ecs_alb_purchases" {
       }
     },
   ]
+}
+
+output "dns_name_load_balancer" {
+  description = "DNS name under which the service is exposed"
+  value       = module.ecs_alb_purchases.lb_dns_name
 }
